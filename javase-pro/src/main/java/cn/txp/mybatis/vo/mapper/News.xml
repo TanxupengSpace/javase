@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间,用于表示不同SQL配置文件的唯一表示 -->
+<mapper namespace="cn.txp.mybatis.mapper.NewsNS"> 
+	<insert id="doCreate" parameterType="cn.txp.mybatis.vo.News">
+		INSERT INTO news(title, content) VALUES (#{title}, #{content});
+	</insert>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 定义数据库连接的相关配置 -->
+	<environments default="mysqlDev">
+		<!-- 配置mysql相关信息 -->
+		<environment id="mysqlDev">
+			<!-- 配置事务的控制 -->
+			<transactionManager type="jdbc"/>
+			<!-- 
+				配置数据驱动连接 
+					type="POOLED"：表示当前数据库连接全部交由连接池来管理
+					type="JNDI"：表示利用容器来进行数据库连接池挂你
+					type="UNPOOLED"：表示不使用数据池来管理
+			-->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"/>
+				<property name="username" value="root"/>
+				<property name="password" value="19930716_Tan"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="cn/txp/mybatis/vo/mapper/News.xml"></mapper>
+	</mappers>
+</configuration>

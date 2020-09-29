@@ -1,0 +1,7 @@
+DROP TABLE news PURGE;
+CREATE TABLE news(
+	nid    BIGINT AUTO_INCREMENT,
+	title  VARCHAR(50),
+	content TEXT,
+	CONSTRAINT pk_nid PRIMARY KEY(nid)
+);
