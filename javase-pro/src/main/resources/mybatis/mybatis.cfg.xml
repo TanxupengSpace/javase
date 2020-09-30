@@ -3,6 +3,9 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<typeAliases>
+		<package name="cn.txp.mybatis.vo"/>
+	</typeAliases>
 	<!-- 定义数据库连接的相关配置 -->
 	<environments default="mysqlDev">
 		<!-- 配置mysql相关信息 -->

@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import cn.txp.mybatis.vo.News;
 
-public class TestNews{
+public class NewsInsert{
 	@Test
 	public void doCreate() {
 		try {
